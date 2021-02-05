@@ -3,7 +3,7 @@ class Consumer():
     def __init__(self,name,age, gender): # 이름, 나이, 성별 넣기
         self.money = 50000
         self.health = 50
-        self.work = ""
+        self.work = str()
         self.name = str(name)
         self.age = age
         self.gender = str(gender)   
@@ -12,10 +12,10 @@ class Consumer():
     
 
     
-    def work(self,a): # 하는 일
-        self.work = str(a)
+    def works(self, work): # 하는 일
+        self.work = a
         print("your job just saved : %s " %(self.work))
-        return
+        
     
     def rename(self,name): # 이름 개명
         self.name = name
@@ -112,7 +112,7 @@ if __name__ == "__main__": # 시작
     a.complain("the coffee is too strong",bari)
 
     
-
+    a.works("police")
 
 
 
