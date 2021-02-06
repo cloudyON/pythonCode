@@ -12,7 +12,7 @@ class Consumer():
     
 
     
-    def works(self, work): # 하는 일
+    def works(self, a): # 하는 일
         self.work = a
         print("your job just saved : %s " %(self.work))
         
@@ -71,13 +71,13 @@ class Baristar():
         del clsMenu.coffe_list[name]
         print("menu been deleted")
     
-    def receive_money(self,clsConsumer,clsMenu): # 메뉴를 산다음 바로 사용하기
+    def receive_money(self,clsConsumer,clsMenu): 
         for menuName in clsConsumer.order:
             self.money += int(clsMenu.coffee_list[menuName][0])
             
             
 
-    def make_coffe(self,clsConsumer, clsMenu):
+    def make_coffee(self,clsConsumer, clsMenu): # receive_money() 한다음 사용
         for i in clsConsumer.order:
             print("The %s you ordered came out." %i)
             clsConsumer.receive.append(i)
@@ -104,8 +104,9 @@ if __name__ == "__main__": # 시작
     bari = Baristar(menu)
 
     a.buy("americano",menu)
-    bari.make_coffe(a,menu)
-    bari.receive_money(a,menu)
+    bari.receive_money(a, menu)
+    bari.make_coffee(a,menu)
+   
     a.drink(menu)
 
     a.enfo()
@@ -113,6 +114,17 @@ if __name__ == "__main__": # 시작
 
     
     a.works("police")
+
+    a.buy("americano",menu)
+    bari.receive_money(a, menu)
+    bari.make_coffee(a,menu)
+   
+    a.drink(menu)
+    
+
+    
+
+
 
 
 
