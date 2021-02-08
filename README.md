@@ -9,7 +9,9 @@ hi! l'm cloud! thank you for looking this repository!
 This repository is 
 
 where my Python code is open sourced.!
-
+##
+##
+##
 
 thank you!
 
@@ -20,6 +22,7 @@ thank you!
 오픈 소스 파이썬 코드를 공유하는 곳입니다.
 
 ##
+    admin.py
 ##
 
 
