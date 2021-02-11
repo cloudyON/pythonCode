@@ -5,14 +5,19 @@ class passenger():
         self.reserv = []
         self.name
 
-    def reservation(self, air,date,airline:'clsAl', airport_system:'clsAs'):
+    def reservation(self, air:'nameofAirline',date,airline:'clsAl', airport_system:'clsAs'):
+        slash = 0
+        if '/' in date:
+            slash = date.index('/')
+            if air in airline.airlines and 12 >= int(date[0:(slash-1)]) >= 1 and 31 >= int(date[(slash+1):(len(date)-1)]) >= 1:
+                airport_system.airSchedule[self.name] = [air, date]
+                print(f"{date} 날짜에 {air}항공사에 등록되었습니다.")
 
-        if air in airline.airlines and date[0] >= 1 and date[len(date)-1] <= 32:
-            airport_system.airSchedule[self.name] = [air, date]
-            print(f"{date} 날짜에 {air}항공사에 등록되었습니다.")
+            else:
+                print("날짜나 항공사가 잘못 입력되셨습니다.")
 
-        else :
-            print(f"{air} 항공사는 존재하지 않습니다.")
+        else:
+            print("날짜를 잘못입력하셨습니다.")
 
 
 
