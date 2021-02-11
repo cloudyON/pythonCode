@@ -3,21 +3,23 @@ class passenger():
         self.money = 0
         self.schedule = 0
         self.reserv = []
+        self.name
 
-    def reservation(self, airline):
-        print("this code is incomplete")
-        # Incomplete
-        # Incomplete
+    def reservation(self, air,date,airline:'clsAl', airport_system:'clsAs'):
+
+        if air in airline.airlines and date[0] >= 1 and date[len(date)-1] <= 32:
+            airport_system.airSchedule[self.name] = [air, date]
+            print(f"{date} 날짜에 {air}항공사에 등록되었습니다.")
+
+        else :
+            print(f"{air} 항공사는 존재하지 않습니다.")
 
 
 
 
 class airport_system():
     def __init__(self):
-        self.airSchedule = []
-
-
-
+        self.airSchedule = {}
 
 
 
