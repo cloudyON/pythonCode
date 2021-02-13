@@ -3,7 +3,7 @@ class passenger():
         self.money = 0
         self.schedule = 0
         self.reserv = []
-        self.name
+        self.name = ''
 
     def reservation(self, air:'nameofAirline',date,airline:'clsAl', airport_system:'clsAs'):
         slash = 0
