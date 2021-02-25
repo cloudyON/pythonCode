@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
+
 int main(){
     /*
     char 형태 완전정복
@@ -14,6 +16,7 @@ int main(){
     끝
     */
 
+    
     char ab[5] = "abc";
     char ac = 'a';
 
@@ -26,7 +29,7 @@ int main(){
 
     char b[3] = "c";
 
-    char cl[] = {'a', 'b','abc','d','e','b','c'};
+    char cl[] = {'a', 'b','a','d','e','b','c'};
 
     printf("b : %s \n", b);
     printf("ac : %c \n", ac);
