@@ -224,15 +224,3 @@ if __name__ == "__main__":  # 시작
     pororo.complain('the coffee is too strong', menuV2)
 
     bariA.get_info()
-
-
-    
-    
-    
-                 
-    
-
-
-    
-
-    
